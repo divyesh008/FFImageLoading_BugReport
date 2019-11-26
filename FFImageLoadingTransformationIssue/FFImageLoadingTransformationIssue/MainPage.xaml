@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="FFImageLoadingTransformationIssue.MainPage"  
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"  
+             xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             BackgroundColor="Red">  
+          
+    <ScrollView>  
+        <StackLayout Padding="20,0">  
+            <Label Text="FFimageLoadingApp" TextColor="AliceBlue" FontSize="40"/>  
+  
+            <Label Text="Test" TextColor="White" FontSize="40" />  
+            <Label Text="Circle Transformation" TextColor="White" FontSize="24"/>  
+            <ff:CachedImage Source="https://tinyurl.com/qph49y4">  
+                <ff:CachedImage.Transformations>  
+                    <ffTransformations:CircleTransformation />  
+                </ff:CachedImage.Transformations>  
+            </ff:CachedImage>  
+        </StackLayout>  
+    </ScrollView>
+
+    <!--<StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="#57bcec" Padding="5" Orientation="Horizontal">
+    <ContentView Padding="5,0,0,0">
+        <ff:CachedImage DownsampleToViewSize="True" HorizontalOptions="Center" VerticalOptions="Center"
+                                    ErrorPlaceholder="{Binding PlaceholderImage}" LoadingPlaceholder="{Binding PlaceholderImage}" 
+                                    Source="https://tinyurl.com/qph49y4"
+                                    Aspect="AspectFit">
+            <ff:CachedImage.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" WinPhone="40" />
+            </ff:CachedImage.WidthRequest>
+            <ff:CachedImage.HeightRequest>
+                <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" WinPhone="40" />
+            </ff:CachedImage.HeightRequest>
+            <ff:CachedImage.Transformations>
+                <ffTransformations:CircleTransformation />
+            </ff:CachedImage.Transformations>
+        </ff:CachedImage>
+    </ContentView>
+    <ContentView Padding="10,0,0,0" VerticalOptions="FillAndExpand">
+        <Label Text="Alan Parker" FontSize="14" TextColor="White" VerticalOptions="Center" />
+    </ContentView>
+</StackLayout>-->
+</ContentPage> 

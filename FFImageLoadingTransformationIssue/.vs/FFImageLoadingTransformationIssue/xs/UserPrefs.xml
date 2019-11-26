@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{F2147F9D-DE12-45CE-9DBE-38C92286B766}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FFImageLoadingTransformationIssue/MainPage.xaml">
+    <Files>
+      <File FileName="FFImageLoadingTransformationIssue/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="FFImageLoadingTransformationIssue/MainPage.xaml" Line="15" Column="64" />
+      <File FileName="FFImageLoadingTransformationIssue/obj/Debug/netstandard2.0/MainPage.xaml.g.cs" Line="25" Column="1" />
+      <File FileName="FFImageLoadingTransformationIssue.Android/MainActivity.cs" Line="24" Column="74" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FFImageLoadingTransformationIssue" expanded="True">
+            <Node name="FFImageLoadingTransformationIssue" expanded="True">
+              <Node name="MainPage.xaml" expanded="True" selected="True" />
+            </Node>
+            <Node name="FFImageLoadingTransformationIssue.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.FFImageLoadingTransformationIssue.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.FFImageLoadingTransformationIssue.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3FF09D3A-3028-4192-8D09-21955D4BD67B" />
+</Properties>
