@@ -1,23 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
-             x:Class="FFImageLoadingTransformationIssue.MainPage"  
-             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"  
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FFImageLoadingTransformationIssue.MainPage"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:ffTransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-             BackgroundColor="Red">  
-          
-    <ScrollView>  
-        <StackLayout Padding="20,0">  
-            <Label Text="FFimageLoadingApp" TextColor="AliceBlue" FontSize="40"/>  
-  
-            <Label Text="Test" TextColor="White" FontSize="40" />  
-            <Label Text="Circle Transformation" TextColor="White" FontSize="24"/>  
-            <ff:CachedImage Source="https://tinyurl.com/qph49y4">  
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             BackgroundColor="Red">
+
+    <ScrollView>
+        <StackLayout Padding="20,0">
+            <Label Text="FFimageLoadingApp"
+                   TextColor="AliceBlue"
+                   FontSize="40" />
+
+            <Label Text="Test"
+                   TextColor="White"
+                   FontSize="40" />
+            <Label Text="Circle Transformation"
+                   TextColor="White"
+                   FontSize="24" />
+            
+
+            <controls:CircleImage Source="https://tinyurl.com/qph49y4"
+                                  Aspect="AspectFit">
+                <controls:CircleImage.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS">50</On>
+                        <On Platform="Android">40</On>
+                    </OnPlatform>
+                </controls:CircleImage.WidthRequest>
+                <controls:CircleImage.HeightRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS">50</On>
+                        <On Platform="Android">40</On>
+                    </OnPlatform>
+                </controls:CircleImage.HeightRequest>
+            </controls:CircleImage>
+            <ff:CachedImage x:Name="cacheImg" Source="https://tinyurl.com/qph49y4" 
+                            CacheType="None" DownsampleHeight="40">  
                 <ff:CachedImage.Transformations>  
                     <ffTransformations:CircleTransformation />  
                 </ff:CachedImage.Transformations>  
-            </ff:CachedImage>  
-        </StackLayout>  
+            </ff:CachedImage>
+            <!--<Button x:Name="ResizePic" Text="Resize Photo" HeightRequest="50" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center"
+                    BackgroundColor="White" TextColor="Blue"> </Button>-->
+        </StackLayout>
     </ScrollView>
 
     <!--<StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="#57bcec" Padding="5" Orientation="Horizontal">

@@ -110,6 +110,7 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -129,5 +130,8 @@
       <Project>{BB618172-03DE-4F5E-A5A0-4614736E64B5}</Project>
       <Name>FFImageLoadingTransformationIssue</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\gandhiji.jpg" />
   </ItemGroup>
 </Project>

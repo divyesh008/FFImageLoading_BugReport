@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ImageCircle.Forms.Plugin.iOS;
 using UIKit;
 
 namespace FFImageLoadingTransformationIssue.iOS
@@ -24,6 +25,7 @@ namespace FFImageLoadingTransformationIssue.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            ImageCircleRenderer.Init();
             LoadApplication(new App());
             
             return base.FinishedLaunching(app, options);
