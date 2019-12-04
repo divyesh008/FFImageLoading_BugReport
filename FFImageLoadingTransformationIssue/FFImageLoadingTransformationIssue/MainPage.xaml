@@ -21,7 +21,7 @@
                    FontSize="24" />
             
 
-            <controls:CircleImage Source="https://tinyurl.com/qph49y4"
+            <controls:CircleImage x:Name="CircleImg" Source="https://tinyurl.com/qph49y4"
                                   Aspect="AspectFit">
                 <controls:CircleImage.WidthRequest>
                     <OnPlatform x:TypeArguments="x:Double">
@@ -37,13 +37,15 @@
                 </controls:CircleImage.HeightRequest>
             </controls:CircleImage>
             <ff:CachedImage x:Name="cacheImg" Source="https://tinyurl.com/qph49y4" 
-                            CacheType="None" DownsampleHeight="40">  
+                            CacheType="None">  
                 <ff:CachedImage.Transformations>  
                     <ffTransformations:CircleTransformation />  
                 </ff:CachedImage.Transformations>  
             </ff:CachedImage>
-            <!--<Button x:Name="ResizePic" Text="Resize Photo" HeightRequest="50" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center"
-                    BackgroundColor="White" TextColor="Blue"> </Button>-->
+            <Button x:Name="ResizePic" Text="Resize Photo" HeightRequest="50" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center"
+                    BackgroundColor="White" TextColor="Blue"> </Button>
+             <Button x:Name="Monochrome" Text="Monochrome Photo" HeightRequest="50" WidthRequest="120" HorizontalOptions="Center" VerticalOptions="Center"
+                    BackgroundColor="White" TextColor="Blue"> </Button>
         </StackLayout>
     </ScrollView>
 
