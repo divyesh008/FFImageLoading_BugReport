@@ -31,7 +31,8 @@ namespace FFImageLoadingTransformationIssue
 
             using (var image = await Plugin.ImageEdit.CrossImageEdit.Current.CreateImageAsync(imageBytes))
             {
-                var data = image.ToMonochrome().ToJpeg(50);
+                //Change color image to black/white image [Gray scale an image]
+                var data = image.ToMonochrome().ToJpeg(80);
                 cacheImg.Source = ImageSource.FromStream(() => new MemoryStream(data));
                 CircleImg.Source = ImageSource.FromStream(() => new MemoryStream(data));
             }
@@ -44,7 +45,8 @@ namespace FFImageLoadingTransformationIssue
 
             using (var image = await Plugin.ImageEdit.CrossImageEdit.Current.CreateImageAsync(imageBytes))
             {
-                var data = image.Crop(0, 1, 100, 100).ToPng();
+                //Crop the image 
+                var data = image.Crop(1, 0, 70, 200).ToPng();
                 cacheImg.Source = ImageSource.FromStream(() => new MemoryStream(data));
                 CircleImg.Source = ImageSource.FromStream(() => new MemoryStream(data));
             }
